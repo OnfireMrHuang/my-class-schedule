@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="page-section">
+  <view class="example-container">
+  
+  <!--利用阿里iconFont制作自定义图标 -->
+  <view class="gap">自定义图标</view> 
+  <icon class="iconfont icon-heart"></icon>
+  <icon class="iconfont icon-like"></icon>
+
+  <!-- 微信官方支持的方形进度条 -->>
+  <view class="gap"></view>
+  <view class="gap">已经加载完的进度条progress，怎么点击某个按钮让它重新加载呢？</view>
+  <progress border-radius="5" bindtap="onTapProgressBar" stroke-width="2" percent="{{percentValue}}" active-mode="forwards" active show-info="{{false}}" bindactiveend="onProgressActiveEnd"/>
+  <button bindtap="onTapReloadBtn">重新加载</button>
+  
+  <!-- 7 环形进度条 -->
+  <view class="gap">环形进度条</view>
+  <circle-progress id="circle-progresss1" percent="{{percentValue}}"/>
+  <button bindtap="drawProgress">redraw</button>
+
+  <!--富文本-->
+  <view class="gap"></view>
+  <rich-text space="emsp" nodes="{{nodes}}" bindtap="tap"></rich-text>
+
+  <!-- 使用parser组件 -->
+  <view class="gap"></view>
+  <parser bindimgtap="onTapImage" html="{{html}}" tag-style="{{tagStyle}}" />
+  </view>
+</view>

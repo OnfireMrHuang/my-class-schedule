@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "circle-progress": "../circle-progress/index",
+    "parser": "../../components/parser/parser"
+  }
+}
